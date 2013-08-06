@@ -3,6 +3,12 @@ scm-utils
 
 scm-utils contains some number of small command-line helpers for working with Source Code Management (SCM) systems.
 
+Supported systems:
+* svn
+* git
+* bzr
+* hg
+
 up-all
 ------
 
@@ -30,8 +36,3 @@ Author
 
 Yury Kapoyko, Saint-Petersburg, Russia
 yury.kapoyko@live.com
-
-License
-=======
-
-GPLv2
