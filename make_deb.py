@@ -1,13 +1,13 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import string, os, stat, shutil, subprocess
 
 # Package options
 pkg_options = {
 	'pkg_name': 'scm-utils',
-	'architecture': "amd64",
-	'build_system': 'kubuntu1304',
-	'version': '1.0-0'}
+	'architecture': "all",
+	'build_system': 'gnulinux',
+	'version': '1.0-1'}
 
 # Package control
 deb_control = string.Template("""
