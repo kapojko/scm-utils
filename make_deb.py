@@ -7,7 +7,7 @@ pkg_options = {
 	'pkg_name': 'scm-utils',
 	'architecture': "all",
 	'build_system': 'gnulinux',
-	'version': '1.0-1'}
+	'version': '1.2-1'}
 
 # Package control
 deb_control = string.Template("""
@@ -17,21 +17,15 @@ Maintainer: Yury Kapoyko <yury.kapoyko@live.com>
 Architecture: $architecture
 Section: Version Control Systems
 Description: Various helper utilities for SCM (Source Code Management) systems.
-Depends: python
+Depends: bash
 """).substitute(pkg_options)
 
 def collect_files(pkg_root):
 	# Library files
-	os.makedirs(os.path.join(pkg_root, 'usr/lib/scm-utils'))
 	os.makedirs(os.path.join(pkg_root, 'usr/bin'))
 	
-	shutil.copy('st-all.py', os.path.join(pkg_root, 'usr/lib/scm-utils'))
-	os.chmod(os.path.join(pkg_root, 'usr/lib/scm-utils/st-all.py'), 0o755)
-	os.symlink('/usr/lib/scm-utils/st-all.py', os.path.join(pkg_root, 'usr/bin/st-all')) 
-	
-	shutil.copy('up-all.py', os.path.join(pkg_root, 'usr/lib/scm-utils'))
-	os.chmod(os.path.join(pkg_root, 'usr/lib/scm-utils/up-all.py'), 0o755)
-	os.symlink('/usr/lib/scm-utils/up-all.py', os.path.join(pkg_root, 'usr/bin/up-all')) 
+	shutil.copy('st-all.bash', os.path.join(pkg_root, 'usr/bin/st-all'))
+	shutil.copy('up-all.bash', os.path.join(pkg_root, 'usr/bin/up-all'))
 	
 	# Package files
 	os.makedirs(os.path.join(pkg_root, 'DEBIAN'))

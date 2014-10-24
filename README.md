@@ -18,8 +18,6 @@ Base syntax:
 
     up-all
     
-See `up-all --help` for detailed help.
-
 st-all
 ------
 
@@ -27,12 +25,11 @@ This scripts walks directories recursively and checks the state of all repositor
 
 Base syntax:
 
-    st-all [-d]
+    st-all
 
-See `st-all --help` for detailed help.
 
 Author
 ======
 
 Yury Kapoyko, Saint-Petersburg, Russia
-yury.kapoyko@live.com
+yury.kapoyko@mail.ru
